@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "JetBrains Mono", "SF Mono", "Fira Code", monospace;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+
+  --color-void: #0a0e14;
+  --color-hull: #111720;
+  --color-panel: #161d2a;
+  --color-ridge: #1e2738;
+  --color-muted: #4a5568;
+  --color-dim: #8694a8;
+  --color-bright: #c9d6e3;
+  --color-white: #edf2f7;
+
+  --color-teal-1: #0d3b3e;
+  --color-teal-2: #146b6d;
+  --color-teal-3: #1a9e9e;
+  --color-teal-4: #2dd4bf;
+  --color-teal-5: #5eead4;
+  --color-teal-glow: rgba(45, 212, 191, 0.15);
+
+  --color-amber: #f59e0b;
+  --color-rose: #f43f5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-void);
+  color: var(--color-bright);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-hull);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ridge);
+  border-radius: 3px;
+}
+
+/* Sunburst tooltip */
+.sunburst-tooltip {
+  position: fixed;
+  pointer-events: none;
+  background: var(--color-panel);
+  border: 1px solid var(--color-ridge);
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  color: var(--color-bright);
+  z-index: 50;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
